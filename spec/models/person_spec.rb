@@ -20,6 +20,10 @@ describe Person do
   it "should not be valid without a last name" do
     @person.last_name=nil
     @person.should_not be_valid #basically like (person.valid?==true)
+  end
+  
+  it "should have an array of phone numbers" do
+    @person.phone_numbers.should be_instance_of(Array)
   end    
   
 end
