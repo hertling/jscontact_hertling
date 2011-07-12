@@ -2,10 +2,14 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
 gem 'sqlite3'
-gem 'rspec-rails'
 gem 'jquery-rails'
-gem 'powder'
-gem 'heroku'
+
+group :development, :test do
+	gem 'rspec-rails'
+	gem 'powder'
+	gem 'heroku'
+	gem 'nifty-generators'
+end
 
 
 # Use unicorn as the web server
@@ -26,3 +30,4 @@ gem 'heroku'
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "mocha", :group => :test
