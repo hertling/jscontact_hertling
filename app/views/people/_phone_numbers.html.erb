@@ -1,0 +1,12 @@
+<ul>
+  <% person.phone_numbers.each do |phone_number| %>
+    <li>
+      <%= phone_number.number %>
+      <%= link_to "(edit)", edit_phone_number_path(phone_number), :id => dom_id(phone_number, :edit) %>
+			<%= link_to "(delete)", phone_number, :id => dom_id(phone_number, :delete), :confirm => 'Are you sure you want to delete this number?', :method => :delete %>
+    </li>
+  <% end %>
+      <li>
+				<%= link_to "Add a Phone Number", new_phone_number_path(:person_id => person), :id => dom_id(person.phone_numbers.new) %>
+			</li>
+</ul>

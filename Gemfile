@@ -9,6 +9,14 @@ group :development, :test do
 	gem 'powder'
 	gem 'heroku'
 	gem 'nifty-generators'
+	gem "mocha"	
+	gem "capybara"
+	gem "guard"
+	gem "guard-rspec"
+	gem "rb-fsevent"
+	gem "growl"
+	gem "fabrication"
+	gem "faker"
 end
 
 
@@ -30,4 +38,4 @@ end
 # group :development, :test do
 #   gem 'webrat'
 # end
-gem "mocha", :group => :test
+

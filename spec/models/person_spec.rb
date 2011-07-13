@@ -5,8 +5,7 @@ describe Person do
     # Runs ONCE (total) before all tests
   end
   before(:each) do
-    @person = Person.new(:first_name => 'Daffy', :last_name => 'Duck')
-    # Runs once before each of the tests
+    @person = Fabricate(:person)
   end
   
   it "should be valid" do
