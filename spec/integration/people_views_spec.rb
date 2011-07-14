@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+
 describe "the views for people", :type => :request do
   context "when listing the people" do
     before(:each) do
@@ -8,7 +9,6 @@ describe "the views for people", :type => :request do
       visit people_path     
     end
     it "should list the phone numbers" do
-      save_and_open_page
       [@person1, @person2].each do |person|
         person.phone_numbers.each do |phone_number|
           page.should have_content(phone_number.number)
